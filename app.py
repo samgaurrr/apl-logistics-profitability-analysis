@@ -114,15 +114,7 @@ with t4:
 with t5:
     for field,title in [("Market","Market"),("Order Region","Order Region"),("Order Country","Country")]:
         g=f.groupby(field,as_index=False).agg(Sales=("Sales","sum"),Profit=("Order Profit Per Order","sum")); g["Margin %"]=g.Profit/g.Sales*100
-                st.plotly_chart(
-            px.bar(
-                g.sort_values("Margin %"),
-                x=field,
-                y="Margin %",
-                text="Margin %"
-            ),
-            key=f"margin_bar_{field}"
-        )
+        st.plotly_chart(px.bar(g.sort_values("Margin %"), x=field, y="Margin %", text="Margin %"))
 with t6:
     st.write(f"Filtered rows: **{len(f):,}**")
     st.download_button("⬇️ Download Filtered Data",f.to_csv(index=False).encode(),"apl_filtered_data.csv","text/csv")
