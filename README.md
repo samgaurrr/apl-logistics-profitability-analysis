@@ -1,40 +1,73 @@
 # APL Logistics: Customer, Product & Profitability Performance Analysis
 
-Interactive Streamlit dashboard for customer, product, category, market and discount profitability analysis.
+An interactive **Streamlit dashboard** and business analysis of APL Logistics order data, designed to identify which customers, products, categories, and markets truly generate profit — and how discounts impact profitability.
 
-## Live Dashboard
-Add the deployed Streamlit URL after deployment.
+Built as part of the **Unified Mentor Data Science Internship Program**.
 
-## Dataset
-The supplied dataset contains 180,519 order lines and 40 original columns. The app uses `data/apl_clean.csv.gz`, a cleaned dataset with personal address fields and coordinates removed. There is no order-date field, so the dashboard does not invent calendar trends.
+---
 
-## Key results
-- Revenue: **$36.78M**
-- Profit: **$3.97M**
-- Profit margin: **10.78%**
-- Loss-making order lines: **18.7%**
-- Net loss-making customers: **4,069**
-- Loss-making products: **3**
-- A 15% discount-cap scenario indicates about **$429K** potential additional profit if volumes remain constant.
+## 🚀 Live Dashboard
 
-## Run locally
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
+🔗 **Streamlit App:**  
+https://YOUR-APP-NAME.streamlit.app
 
-## Structure
+🔗 **GitHub Repository:**  
+https://github.com/YOUR-USERNAME/apl-logistics-profitability-analysis
+
+---
+
+## 📌 Project Overview
+
+APL Logistics has a large volume of order and sales data, but revenue alone does not provide a complete picture of business performance.
+
+This project analyzes order-level data to understand:
+
+- Which customers generate the most profit
+- Which customers are loss-making
+- Which products and categories have the highest and lowest margins
+- Which markets and regions perform best
+- How discounts affect profitability
+- How concentrated customer profitability is
+- How much profit could potentially be recovered through better discount control
+
+The final result is an interactive **Streamlit profitability dashboard** that allows users to explore these insights using multiple filters and visualizations.
+
+---
+
+## 🎯 Business Problem
+
+The organization has detailed sales and order data but lacks sufficient visibility into:
+
+- Customer-level profitability
+- Product and category margins
+- Discount-driven margin erosion
+- High-value vs. low-value customers
+- Loss-making products
+- Market and regional profitability
+
+As a result, pricing and customer strategies may focus heavily on **revenue rather than actual profit**.
+
+This project addresses that problem through exploratory data analysis, profitability metrics, customer segmentation, and interactive business intelligence dashboards.
+
+---
+
+## 📊 Dataset
+
+The original dataset contains:
+
+- **180,519 order lines**
+- **40 original columns**
+- **20,652 customers**
+- **118 products**
+- **50 categories**
+- **5 global markets**
+
+### Data Preparation
+
+The original dataset was cleaned and transformed into a slimmer dataset used by the Streamlit application:
+
 ```text
-app.py
-requirements.txt
-README.md
-research_paper.md
-executive_summary.md
 data/apl_clean.csv.gz
-```
-
-## Tech stack
-Python, Pandas, NumPy, Plotly, Streamlit.
 
 ## Author
 **Sambhav Gaur** — BCA, Jagannath Institute of Management Sciences
